@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Build
       run: |
-      go get github.com/bwmarrin/discordgo
-      go build
+        go get github.com/bwmarrin/discordgo
+        go build
     - name: Test
       run: go test
