@@ -14,7 +14,9 @@ jobs:
         go-version: ${{ matrix.go-version }}
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Test
-      run: go test 
     - name: Build
-      run: go build
+      run: |
+      go get github.com/bwmarrin/discordgo
+      go build
+    - name: Test
+      run: go test
